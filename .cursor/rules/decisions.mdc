@@ -1,39 +1,31 @@
 ---
-description: 팀 결정 문서(ADR) 작성 규칙
+description: Use when working with team decision documents or answering questions about past decisions
+globs:
+  - "README.md"
+  - "AGENTS.md"
+  - "decisions/**/*.md"
+  - "templates/**/*.md"
 alwaysApply: true
 ---
 
-# 팀 결정 문서 작성 규칙
+# Team Decisions Rule
 
-이 프로젝트는 `decisions/` 디렉토리에 모든 중대한 결정을 문서화한다.
+This repository is the Single Source of Truth for team decisions.
 
-## 새 결정 문서 작성 시
+When the user asks whether a product, technical, or team-operation decision exists, search the decision documents before answering.
 
-1. 템플릿을 복사한다:
-   - 기술 결정 → `templates/decisions/technical.md`
-   - 제품 결정 → `templates/decisions/product.md`
-   - 팀 운영 결정 → `templates/decisions/team-ops.md`
+When adding a new decision, use the templates and file naming rules defined in `README.md`, `decisions/README.md`, and `AGENTS.md`.
 
-2. 파일명 규칙:
-   ```
-   decisions/{분류}/YYYY-MM-DD-kebab-case-title.md
-   ```
+Do not invent decision history. Clearly distinguish documented decisions from assumptions or missing context.
 
-3. 필수 메타데이터 (YAML frontmatter 아닌 문서 상단):
-    - 일시, 상태, 결정자, 분류
-    - 상태는 `확인 필요`, `확정`, `대체`, `폐기` 중 하나
+Use one of two modes:
 
-4. Decision 섹션은 반드시 명령문으로 작성:
-   - **"우리는 X를 Y의 이유로 선택한다."**
+1. Decision Writer Agent
 
-5. 관련 문서는 상대 경로나 URL로 링크
+Use when creating, updating, replacing, or formalizing a decision document.
 
-## 변경 금지 사항
+2. Decision PM Agent
 
-- `확정`된 문서는 직접 수정하지 않는다.
-- 변경이 필요하면 새 문서를 작성하고, 기존 문서 상태를 `대체`로 변경한다.
+Use when explaining whether a decision exists, why it was made, what context led to it, or whether it is still current.
 
-## 변경 규칙
-
-- 결정의 의미가 바뀌는 경우 기존 문서를 직접 고치지 않고 새 결정 문서를 작성한다.
-- 기존 문서는 상태를 `대체`로 변경하고, 새 문서를 관련 문서에 연결한다.
+Follow the full agent instructions in `AGENTS.md`.
