@@ -1,7 +1,7 @@
 # 추천 정렬은 Main 홈 상품 영역에만 적용하고 ShowCase에는 적용하지 않음
 
 - **일시**: 2026-05-09
-- **상태**: 확정
+- **상태**: 대체됨
 - **결정자**: @기획 / @디자인 / @개발 합의
 - **분류**: product
 - **영향 범위**: Main, ShowCase, Product Like
@@ -15,6 +15,8 @@ Product Like Signal 기반 정렬을 Main과 ShowCase에 모두 적용하면 Pro
 이번 리디자인의 주요 개선 포인트는 Main 홈 피드와 상품 탐색 경험이다. 좋아요는 Product Card에서 발생하는 사용자 신호로 이해하는 것이 자연스럽고, ShowCase Card나 Section까지 확장하면 추천 모델의 범위가 커진다.
 
 ## 결정 (Decision)
+
+이 결정은 [ShowCase는 연결된 상품 좋아요 정보가 있을 때 정렬 가능](2026-05-15-sort-showcase-by-linked-product-likes-when-available.md) 결정으로 대체되었다.
 
 Product Like Signal 기반 정렬은 Main 홈 상품 영역에만 적용한다. ShowCase 탭에서는 추천 정렬을 적용하지 않는다.
 
@@ -38,3 +40,4 @@ Main 홈 상품 영역은 Product Like Signal이 있을 때 정렬 보정 대상
 ## 관련 문서
 
 - [결정 문서 인덱스](../index.md)
+- [ShowCase는 연결된 상품 좋아요 정보가 있을 때 정렬 가능](2026-05-15-sort-showcase-by-linked-product-likes-when-available.md)

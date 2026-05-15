@@ -13,7 +13,8 @@
 | 2026-05-09 | 확정 | Main 배너 캐러셀은 5초 자동 전환을 기본 동작으로 구현 | Main, FE, Hero Banner, Carousel | [문서](product/2026-05-09-use-simple-auto-advance-for-main-banner-carousel.md) |
 | 2026-05-09 | 확정 | 홈 콘텐츠는 고정 dummy data와 수동 큐레이션으로 구성 | Main, Data, CurationBlock, Product Card | [문서](product/2026-05-09-use-manual-curation-for-home-content.md) |
 | 2026-05-09 | 확정 | ShowCase는 slug 기반 고정 섹션 구조로 구성 | ShowCase, Data, Section | [문서](product/2026-05-09-use-slug-based-fixed-showcase-sections.md) |
-| 2026-05-09 | 확정 | 추천 정렬은 Main 홈 상품 영역에만 적용하고 ShowCase에는 적용하지 않음 | Main, ShowCase, Product Like | [문서](product/2026-05-09-limit-recommendation-sorting-to-main-home.md) |
+| 2026-05-15 | 확정 | ShowCase는 연결된 상품 좋아요 정보가 있을 때 정렬 가능 | ShowCase, Product Like, Collection, Sorting | [문서](product/2026-05-15-sort-showcase-by-linked-product-likes-when-available.md) |
+| 2026-05-09 | 대체됨 | 추천 정렬은 Main 홈 상품 영역에만 적용하고 ShowCase에는 적용하지 않음 | Main, ShowCase, Product Like | [문서](product/2026-05-09-limit-recommendation-sorting-to-main-home.md) |
 | 2026-05-09 | 확정 | 로그인/비로그인 화면 차이는 우상단 버튼으로만 제한 | Login State, Header, Main | [문서](product/2026-05-09-limit-login-state-ui-difference.md) |
 
 ## Technical Decisions

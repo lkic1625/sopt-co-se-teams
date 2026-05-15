@@ -24,7 +24,7 @@
 - Product Like는 사용자가 클릭하여 관심을 표시한 상품
 - Main View의 큐레이션 블록 내에서, 사용자가 Like한 상품을 우선적으로 노출
 - 정렬 신호는 백엔드 모델을 고정하지 않는 가벼운 방식으로 정의
-- ShowCase View에는 개인화 정렬을 적용하지 않는다.
+- ShowCase View에는 기본적으로 개인화 정렬을 적용하지 않는다. 단, [ShowCase는 연결된 상품 좋아요 정보가 있을 때 정렬 가능](2026-05-15-sort-showcase-by-linked-product-likes-when-available.md) 결정에 따라 Collection에 연결된 상품 좋아요 정보를 사용할 수 있는 경우에는 정렬할 수 있다.
 - Feed, Section, ShowCase Card에는 좋아요를 두지 않는다.
 
 ## 이유 (Rationale)
@@ -39,7 +39,7 @@
 - **사용자 경험**: Main에서 관심 상품을 더 잘 보이게 하여 재방문률 향상 기대
 - **개발 범위**: 추천 알고리즘, 머신러닝 모델 제거
 - **BE**: Product Like 수집 API와 정렬 로직만 구현
-- **ShowCase**: 정렬 없이 고정된 순서로 노출
+- **ShowCase**: 기본적으로 고정된 순서로 노출하되, Collection에 연결된 상품 좋아요 정보를 사용할 수 있는 경우에는 정렬 가능
 
 ## 대안 (Alternatives)
 
@@ -49,3 +49,4 @@
 ## 관련 문서
 
 - [Product Like Signal은 백엔드 모델을 고정하지 않는 정렬 신호로 정의](../technical/2026-05-09-define-product-like-signal-as-sorting-signal.md)
+- [ShowCase는 연결된 상품 좋아요 정보가 있을 때 정렬 가능](2026-05-15-sort-showcase-by-linked-product-likes-when-available.md)

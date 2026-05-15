@@ -18,7 +18,7 @@
 
 로그인/비로그인 상태에 따른 화면 차이는 우상단 로그인/로그아웃 버튼 외에는 두지 않는다.
 
-별도 로그인 페이지는 이번 구현 범위에 포함하지 않는다. 로그인 상태가 필요한 경우 query param backdoor를 통해 로그인된 상태를 가정한다. 비로그인 상태에서는 기본 기획 순서를 유지한다. 로그인 상태에서는 Product Like Signal이 있는 경우 Main 상품 정렬 보정이 가능하다. ShowCase 화면은 로그인 상태에 따른 정렬 변화를 갖지 않는다.
+별도 로그인 페이지는 이번 구현 범위에 포함하지 않는다. 로그인 상태가 필요한 경우 query param backdoor를 통해 로그인된 상태를 가정한다. 비로그인 상태에서는 기본 기획 순서를 유지한다. 로그인 상태에서는 Product Like Signal이 있는 경우 Main 상품 정렬 보정이 가능하다. ShowCase 화면은 로그인 상태 자체만으로 정렬 변화를 갖지 않는다. 다만 [ShowCase는 연결된 상품 좋아요 정보가 있을 때 정렬 가능](2026-05-15-sort-showcase-by-linked-product-likes-when-available.md) 결정에 따라 Collection에 연결된 상품 좋아요 정보를 사용할 수 있는 경우에는 정렬할 수 있다.
 
 ## 이유 (Rationale)
 
@@ -26,7 +26,7 @@
 
 ## 영향 (Impact)
 
-Header의 우상단 버튼은 로그인 상태에 따라 달라질 수 있다. Main 콘텐츠 전체는 로그인/비로그인 상태에 따라 별도로 재구성하지 않는다. ShowCase는 로그인 상태와 무관하게 동일한 섹션 구조와 정렬을 유지한다. query param backdoor는 실제 인증을 대체하는 구현 편의 장치로만 사용한다.
+Header의 우상단 버튼은 로그인 상태에 따라 달라질 수 있다. Main 콘텐츠 전체는 로그인/비로그인 상태에 따라 별도로 재구성하지 않는다. ShowCase는 로그인 상태와 무관하게 동일한 섹션 구조를 유지한다. ShowCase 정렬은 로그인 상태 자체가 아니라 Collection에 연결된 상품 좋아요 정보 사용 가능 여부에 따라 제한적으로 적용할 수 있다. query param backdoor는 실제 인증을 대체하는 구현 편의 장치로만 사용한다.
 
 ## 대안 (Alternatives)
 
@@ -38,3 +38,4 @@ Header의 우상단 버튼은 로그인 상태에 따라 달라질 수 있다. M
 ## 관련 문서
 
 - [결정 문서 인덱스](../index.md)
+- [ShowCase는 연결된 상품 좋아요 정보가 있을 때 정렬 가능](2026-05-15-sort-showcase-by-linked-product-likes-when-available.md)
